@@ -1,0 +1,70 @@
+<div style="width: 50%;height: 100%; float: left;">
+    <div>
+        
+    </div>
+    <mat-card style="height: 100%;">
+        <mat-card-header>
+            <div mat-card-avatar class="example-header-image"></div>
+            <mat-card-title>{{item.name}}</mat-card-title>
+        </mat-card-header>
+        <img mat-card-image src= "{{item.src}}">
+        <mat-card-content>
+            <p>
+            {{item.desc}}
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button style="background-color: tan;" (click)= "buyNow()">Buy Now</button>
+            <button mat-button style="background-color: coral;" (click)="addToCart(item)">Add To Cart</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+<div style="width: 30%; height: 100%; float: right;margin-left: 24px;">
+    <div style="color: royalblue;">{{item.Brand}}</div>
+    <div>{{item.title}}</div>
+    <br>
+    <div>Rating: <span style="color:gold;"> *****</span> </div>
+    <br>
+    <div>Price: <br><s style="color: red;">{{item.oldPrice}}</s><br> {{item.newPrice}} (50% Off)</div>
+    <br>
+    <div>sizes:
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle *ngFor = "let size of sizes">{{size}}</mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+    <br>
+    <div>colors:
+        <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+            <mat-button-toggle *ngFor = "let color of colors">
+                <span class="dot {{color}}"></span>
+            </mat-button-toggle>
+        </mat-button-toggle-group>
+    </div>
+    <br>
+    <div>
+        Specification:
+        <br>
+        <ul>
+            <li *ngFor = "let spec of spects">{{spec}}</li>
+        </ul>
+    </div>
+    <br>
+    <div>
+        Reviews:
+        <br>
+        <ul>
+            <li *ngFor = "let review of reviews">{{review}}</li>
+        </ul>
+    </div>
+    <br>
+    <div>
+        <mat-form-field class="example-full-width">
+            <mat-label>Enter Your Address</mat-label>
+            <textarea matInput placeholder="#32,5th cross,Silkboard,Bengaluru"></textarea>
+        </mat-form-field>
+    </div>
+    <br>
+    <div>
+        Expected Delivery : Monday,10th May,2021
+    </div>
+</div>

@@ -1,0 +1,29 @@
+.height100width100{
+    height: 100%;
+    width: 100%;
+}
+
+.redbg{
+    background-color: red;
+}
+
+.white{
+    color: white;
+}
+
+.height33width50{
+    height: 33%;
+    width: 33%;
+}
+
+.greenbg{
+    background-color: green;
+}
+
+.yellowbg{
+    background: yellow;
+}
+
+.bluebg{
+    background-color: blue;
+}

@@ -1,0 +1,16 @@
+.bubukart{
+    font-size: large;
+    justify-content: center;
+}
+
+.dummy{
+    background-color: red;
+}
+
+.blank{
+    height: 80%;
+    width: 50%;
+    float: right;
+    font-size: x-large;
+    align-content: center;
+}

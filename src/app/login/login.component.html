@@ -1,0 +1,29 @@
+<div style=" height: 100%;width: 100%; background-color: aqua;padding: 10%;">
+  <div class="blank">
+    <p style="color: darkblue;">BUBUKart</p>
+    <p >This is a Place where you can buy anything!!</p></div>
+  <mat-card style="opacity: 0.8; height: 50%;width: 30%;align-self: center;">
+    <div style=" height: 50%; width:80%;">
+      <div class="bubukart">
+        <strong> Login To BUBUKart</strong>
+      </div>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Username </mat-label>
+        <input matInput placeholder=" Email or Phone number" maxlength="12" [(ngModel)]= "userName"  required>
+        <mat-hint>User name given during resistration</mat-hint>
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" placeholder="Enter your password" maxlength="8"  [(ngModel)]="password" required>
+      </mat-form-field>
+      <br> 
+      <div>
+        <button mat-raised-button color="primary" style="float: left;" (click)="loginClicked( )" [ngClass]="{dummy : userName ==='apurba'}">Login</button> &nbsp;
+        <button mat-raised-button color="primary" style="float: inline-start; background-color: green" >Signup</button>
+        <button mat-raised-button color="primary" style="float: right; background-color: red;" (click)="resetPassword()" *ngIf = "userName === 'apurba' &&  password ===  'apurba' ">ForgotPassword </button>
+      </div>
+    </div>
+  </mat-card>
+</div>

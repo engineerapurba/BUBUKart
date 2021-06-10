@@ -1,0 +1,16 @@
+<mat-grid-list cols="3" rowHeight="3:2">
+    <mat-grid-tile *ngFor="let item of items" (click)= "gridClicked(item)">
+        <div class="width50">
+            <img class="image" src="{{item.src}}" />
+        </div>
+        <div class="width50">
+            <h1 style="background-color: cyan;">{{item.name}}</h1>
+            <br>
+            <p>{{item.desc}}</p>
+            <br>
+            <h2>Price : <s style="color: red;">{{item.oldPrice}}</s> <br>{{item.newPrice}}</h2>
+            <br>
+        </div>
+    </mat-grid-tile>
+
+</mat-grid-list>

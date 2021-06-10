@@ -1,0 +1,9 @@
+<div style="width: 100%;height: 10%; background-color: red;">
+<app-header [user] = "user"></app-header>
+</div>
+<div style="width: 100%;height: 80%; background-color: blue;">
+<app-content [user] = "user" (outputData) ="childDataEmitted($event)"></app-content>
+</div>
+<div style="width: 100%;height: 10%; background-color: purple;">
+<app-footer [user] = "user" [pageNum] ="num"></app-footer>
+</div>

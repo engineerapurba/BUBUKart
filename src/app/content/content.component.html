@@ -1,0 +1,13 @@
+<p>Hi {{user}}</p>
+
+<br>
+
+<button mat-raised-button (click) = "buttonClicked()">Pass the data</button> 
+<br>
+<button mat-raised-button (click) = "addItem()">Add item</button> 
+<button mat-raised-button (click) = "removeItem()">Remove item</button> 
+
+<br>
+
+<input matInput  [(ngModel)] = "name">
+<button mat-raised-button (click) = "updateName()">Update Name</button> 
